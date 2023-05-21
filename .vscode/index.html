@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="styless.css">
+  <meta charset="utf-8">
+  <title>BUil</title>
+  <style>
+    /* Estilos para el menú */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #080000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #000000, #020000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #000000, #130101); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+
+    ul {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    ul li {
+      position: relative;
+      list-style: none;
+    }
+
+    ul li a {
+      position: relative;
+      left: 200px;
+      font-size: 3em;
+      text-decoration: none;
+      line-height: 1em;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(240, 230, 230, 0.5);
+    }
+
+    ul li a::before {
+      content: attr(data-text);
+      position: absolute;
+      color: var(--clr);
+      width: 0;
+      overflow: hidden;
+      transition: 1s;
+      border-right: 8px solid var(--clr);
+      -webkit-text-stroke: 1px var(--clr);
+    }
+
+    ul li a:hover::before {
+      width: 100%;
+      filter: drop-shadow(0 0 25px var(--clr));
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <ul>
+      <li style="--clr:#00ade1">
+        <a href="inicio.html" data-text="&nbsp;Inicio">&nbsp;Inicio&nbsp;</a>
+      </li>
+      <li style="--clr:#ff6493">
+        <a href="Contacto.html" data-text="&nbsp;Contacto">&nbsp;Contacto&nbsp;</a>
+      </li>
+      <li style="--clr:#ffdd1c">
+        <a href="Registro.html" data-text="&nbsp;Registro">&nbsp;Registro&nbsp;</a>
+      </li>
+      <li style="--clr:#00dc82">
+        <a href="Catalogo.html" data-text="&nbsp;Catalogo">&nbsp;Catalogo&nbsp;</a>
+      </li>
+      <li style="--clr:#dc00d4">
+        <a href="Nosotros.html" data-text="&nbsp;Nosotros">&nbsp;Nosotros&nbsp;</a>
+      </li>
+    </ul>
+</body>
+</html>
